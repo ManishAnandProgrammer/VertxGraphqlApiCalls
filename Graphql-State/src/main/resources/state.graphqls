@@ -1,0 +1,21 @@
+scalar String
+scalar Int
+
+schema {
+  query: Query
+}
+
+type Query {
+  getStateByUserId(userId: Int): State
+}
+
+type State {
+  id: Int
+  name: String
+  country: Country
+}
+
+type Country {
+  id: Int
+  name: String
+}

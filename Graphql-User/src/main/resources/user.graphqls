@@ -1,0 +1,28 @@
+scalar String
+scalar Int
+
+schema {
+  query: Query
+}
+
+type Query {
+  getUser(id: Int!): User!
+  hello: String
+}
+
+type State {
+  id: Int
+  name: String
+  country: Country
+}
+
+type Country {
+  id: Int
+  name: String
+}
+
+type User {
+  id: Int
+  name: String
+  state: State
+}
